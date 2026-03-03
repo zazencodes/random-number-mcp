@@ -2,7 +2,7 @@
 
 Essential random number generation utilities from the Python standard library, including pseudorandom and cryptographically secure operations for integers, floats, weighted selections, list shuffling, and secure token generation.
 
-## 📺 Demo Video
+## Demo Video
 
 https://github.com/user-attachments/assets/303a441a-2b10-47e3-b2a5-c8b51840e362
 
@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/303a441a-2b10-47e3-b2a5-c8b51840e362
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@zazencodes/random-number-mcp/badge" alt="Random Number MCP server" />
 </a>
 
-## 🎲 Tools
+## Tools
 
 
 | Tool                | Purpose                                      | Python function   |
@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/303a441a-2b10-47e3-b2a5-c8b51840e362
 | `secure_random_int` | Generate cryptographically secure integers   | `secrets.randbelow()` |
 
 
-## 🔧 Setup
+## Setup
 
 ### Claude Desktop
 
@@ -44,7 +44,7 @@ Add this to your Claude Desktop configuration file:
 }
 ```
 
-## 📋 Tool Reference
+## Tool Reference
 
 ### `random_int`
 
@@ -175,14 +175,14 @@ Generate a cryptographically secure random integer below upper_bound.
 }
 ```
 
-## 🔒 Security Considerations
+## Security Considerations
 
 This package provides both standard pseudorandom functions (suitable for simulations, games, etc.) and cryptographically secure functions (suitable for tokens, keys, etc.):
 
 - **Standard functions** (`random_int`, `random_float`, `random_choices`, `random_shuffle`): Use Python's `random` module - fast but not cryptographically secure
 - **Secure functions** (`secure_token_hex`, `secure_random_int`): Use Python's `secrets` module - slower but cryptographically secure
 
-## 🛠️ Development
+## Development
 
 ### Prerequisites
 
@@ -278,12 +278,11 @@ npx @modelcontextprotocol/inspector uv run random-number-mcp
 npx @modelcontextprotocol/inspector uvx random-number-mcp
 ```
 
+## MCP Registry
+
+mcp-name: io.github.zazencodes/random-number-mcp
 
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-
-## MCP Registry
-
-mcp-name: io.github.zazencodes/random-number-mcp
 
