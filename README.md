@@ -279,17 +279,11 @@ npx @modelcontextprotocol/inspector uvx random-number-mcp
 ```
 
 
-## 📝 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## MCP Registry
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+mcp-name: io.github.zazencodes/random-number-mcp
 
-## 📚 Links
-
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- [FastMCP Documentation](https://github.com/jlowin/fastmcp)
-- [Python random module](https://docs.python.org/3/library/random.html)
-- [Python secrets module](https://docs.python.org/3/library/secrets.html)

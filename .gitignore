@@ -169,3 +169,6 @@ uv.lock
 todo.md
 devlog.md
 digest.txt
+.mcpregistry_github_token
+.mcpregistry_registry_token
+
