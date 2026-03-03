@@ -243,7 +243,7 @@ uv run --with dist/*.whl random-number-mcp
 ### Release Checklist
 
 1.  **Update Version:**
-    - Increment the `version` number in `pyproject.toml` and `src/__init__.py`.
+    - Increment the `version` number in `pyproject.toml`, `src/random_number_mcp/__init__.py`, and `server.json`.
 
 2.  **Update Changelog:**
     - Add a new entry in `CHANGELOG.md` for the release.
@@ -285,4 +285,3 @@ mcp-name: io.github.zazencodes/random-number-mcp
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-

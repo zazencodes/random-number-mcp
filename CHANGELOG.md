@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-03-03
+
+### Added
+- MCP Registry metadata via `server.json`, including package and transport details.
+- MCP Registry identifier (`mcp-name`) in `README.md`.
+
+### Changed
+- Disabled the FastMCP startup banner in `src/random_number_mcp/server.py` for cleaner STDIO output.
+- Documentation cleanup in `README.md`.
+
 ## [0.1.1] - 2025-06-29
 
 ### Added

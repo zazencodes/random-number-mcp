@@ -1,6 +1,6 @@
 [project]
 name = "random-number-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "Random-number utilities exposed via Model Context Protocol"
 readme = "README.md"
 requires-python = ">=3.10"
