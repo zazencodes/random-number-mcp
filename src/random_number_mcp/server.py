@@ -1,7 +1,6 @@
 """Main MCP server using FastMCP to expose random number utilities."""
 
 import json
-from typing import Any
 
 from fastmcp import FastMCP
 
@@ -41,10 +40,10 @@ def random_float(low: float = 0.0, high: float = 1.0) -> float:
 
 @app.tool()
 def random_choices(
-    population: list[Any],
+    population: list[str | int | float | bool],
     k: int = 1,
     weights: list[int | float] | str | None = None,
-) -> list[Any]:
+) -> list[str | int | float | bool]:
     """Choose k items from population with replacement, optionally weighted.
 
     Args:
@@ -67,7 +66,7 @@ def random_choices(
 
 
 @app.tool()
-def random_shuffle(items: list[Any]) -> list[Any]:
+def random_shuffle(items: list[str | int | float | bool]) -> list[str | int | float | bool]:
     """Return a new list with items in random order.
 
     Args:
@@ -80,7 +79,7 @@ def random_shuffle(items: list[Any]) -> list[Any]:
 
 
 @app.tool()
-def random_sample(population: list[Any], k: int) -> list[Any]:
+def random_sample(population: list[str | int | float | bool], k: int) -> list[str | int | float | bool]:
     """Choose k unique items from population without replacement.
 
     Args:
