@@ -66,7 +66,9 @@ def random_choices(
 
 
 @app.tool()
-def random_shuffle(items: list[str | int | float | bool]) -> list[str | int | float | bool]:
+def random_shuffle(
+    items: list[str | int | float | bool],
+) -> list[str | int | float | bool]:
     """Return a new list with items in random order.
 
     Args:
@@ -79,7 +81,9 @@ def random_shuffle(items: list[str | int | float | bool]) -> list[str | int | fl
 
 
 @app.tool()
-def random_sample(population: list[str | int | float | bool], k: int) -> list[str | int | float | bool]:
+def random_sample(
+    population: list[str | int | float | bool], k: int
+) -> list[str | int | float | bool]:
     """Choose k unique items from population without replacement.
 
     Args:
