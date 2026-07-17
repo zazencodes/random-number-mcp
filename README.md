@@ -2,6 +2,8 @@
 
 Essential random number generation utilities from the Python standard library, including pseudorandom and cryptographically secure operations for integers, floats, weighted selections, list shuffling, and secure token generation.
 
+> Looking for the agent skill version? [random-number-skills](https://github.com/zazencodes/random-number-skills) implements the same random number generation strategy as an agent skill instead of an MCP server.
+
 ## Demo Video
 
 https://github.com/user-attachments/assets/303a441a-2b10-47e3-b2a5-c8b51840e362
