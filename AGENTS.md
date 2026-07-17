@@ -43,7 +43,11 @@ Tools fall into two categories: standard pseudorandom (`random` module) and cryp
 
 ## Release Process
 
-Version must be updated in three places: `pyproject.toml`, `src/random_number_mcp/__init__.py`, and `server.json`. Publishing to PyPI is triggered automatically by creating a GitHub Release with a tag.
+The Release Checklist in `README.md` is canonical — follow it, don't work from memory. Notes for agents:
+
+- The version lives in four fields across three files: `pyproject.toml`, `src/random_number_mcp/__init__.py`, and `server.json` (which carries it both at the top level and under `packages[0]`). Miss one and the release ships inconsistent metadata.
+- `CHANGELOG.md` is updated as part of the same commit as the version bump.
+- Drafting the GitHub Release is a manual UI step. Publishing to PyPI is automatic from there, via the `release: published` trigger in `.github/workflows/publish.yml`. That step is irreversible — a version can never be overwritten or reused on PyPI — so confirm with the maintainer before cutting a release.
 
 ## Git Workflow
 
