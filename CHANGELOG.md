@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-07-17
+
+### Added
+- Link to the [random-number-skills](https://github.com/zazencodes/random-number-skills) project in `README.md`, which implements the same random number generation strategy as an agent skill.
+
+### Changed
+- Narrowed tool signatures in `src/random_number_mcp/server.py` from `list[Any]` to `list[str | int | float | bool]` for `random_choices` and `random_shuffle`, producing a more precise schema for MCP clients.
+- Migrated repository context file to `AGENTS.md`, with `CLAUDE.md` now a symlink to it.
+- Documented the commit and release workflow in `AGENTS.md`.
+
 ## [0.1.2] - 2026-03-03
 
 ### Added
