@@ -47,7 +47,22 @@ The Release Checklist in `README.md` is canonical — follow it, don't work from
 
 - The version lives in four fields across three files: `pyproject.toml`, `src/random_number_mcp/__init__.py`, and `server.json` (which carries it both at the top level and under `packages[0]`). Miss one and the release ships inconsistent metadata.
 - `CHANGELOG.md` is updated as part of the same commit as the version bump.
-- Drafting the GitHub Release is a manual UI step. Publishing to PyPI is automatic from there, via the `release: published` trigger in `.github/workflows/publish.yml`. That step is irreversible — a version can never be overwritten or reused on PyPI — so confirm with the maintainer before cutting a release.
+- Release from `main`, with the branch merged and pushed first. Fetch before assuming local `main` is current — work is sometimes merged upstream via PR, so a local-only merge can leave you diverged.
+
+### Cutting the release
+
+**Always ask the maintainer for explicit confirmation before this step.** Creating the release publishes to PyPI automatically via the `release: published` trigger in `.github/workflows/publish.yml`, and that is irreversible — a version can never be overwritten or reused on PyPI.
+
+The README describes drafting the release in the GitHub UI. An agent can't do that, so use `gh` instead, matching the conventions of every release to date (`v0.1.0` through `v0.1.3`):
+
+- Tag `vX.Y.Z`, title identical to the tag, target `main`, not a draft or prerelease.
+- The body is that version's `CHANGELOG.md` section verbatim, with the `## [X.Y.Z] - DATE` header stripped — the `### Added` / `### Changed` subsections only.
+
+```bash
+gh release create vX.Y.Z --title "vX.Y.Z" --target main --notes-file <notes>
+```
+
+Afterwards, confirm the run succeeded (`gh run watch`) and that the version actually landed on PyPI — a green workflow alone isn't proof.
 
 ## Git Workflow
 
